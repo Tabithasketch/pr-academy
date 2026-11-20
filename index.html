@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#172554">
+<title>PR Academy</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f7f2;
+  color: #172554;
+}
+header {
+  background: #172554;
+  color: white;
+  padding: 28px 20px;
+  border-radius: 0 0 25px 25px;
+}
+header small {
+  color: #e5c878;
+}
+header h1 {
+  margin-bottom: 8px;
+}
+main {
+  padding: 20px;
+}
+.welcome {
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+}
+h2 {
+  font-size: 20px;
+}
+.courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+.course {
+  background: white;
+  padding: 17px 12px;
+  border-radius: 15px;
+  min-height: 135px;
+  box-shadow: 0 2px 8px #0000000c;
+}
+.course span {
+  font-size: 27px;
+}
+.course h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.course p {
+  font-size: 12px;
+  color: #64748b;
+}
+button {
+  background: #172554;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.lesson {
+  background: white;
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: 14px;
+}
+#lesson-content {
+  display: none;
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #64748b;
+  font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <small>LEARN • COMMUNICATE • INFLUENCE</small>
+  <h1>PR Academy 🎓</h1>
+  <p>Your journey to becoming a PR professional starts here.</p>
+</header>
+
+<main>
+
+<section class="welcome">
+  <h2>Welcome, Future PR Professional! 👋</h2>
+  <p>Build your knowledge, improve your communication and develop professional skills.</p>
+  <button onclick="showLesson('intro')">Start Learning</button>
+</section>
+
+<h2>Explore Your Learning Areas</h2>
+
+<div class="courses">
+  <div class="course">
+    <span>📚</span>
+    <h3>PR Fundamentals</h3>
+    <p>Understand the world of Public Relations.</p>
+  </div>
+
+  <div class="course">
+    <span>🎤</span>
+    <h3>Communication</h3>
+    <p>Develop confident communication skills.</p>
+  </div>
+
+  <div class="course">
+    <span>📰</span>
+    <h3>Media Relations</h3>
+    <p>Learn to build relationships with the media.</p>
+  </div>
+
+  <div class="course">
+    <span>✍️</span>
+    <h3>PR Writing</h3>
+    <p>Practise press releases and professional writing.</p>
+  </div>
+
+  <div class="course">
+    <span>🚨</span>
+    <h3>Crisis Communication</h3>
+    <p>Learn how organisations manage crises.</p>
+  </div>
+
+  <div class="course">
+    <span>📝</span>
+    <h3>Quizzes</h3>
+    <p>Test what you have learned.</p>
+  </div>
+</div>
+
+<h2>Start With Your First Lesson</h2>
+
+<div class="lesson">
+  <h3>What is Public Relations?</h3>
+  <p>Begin with the basic meaning and importance of PR.</p>
+  <button onclick="showLesson('intro')">Read Lesson</button>
+</div>
+
+<div id="lesson-content"></div>
+
+</main>
+
+<footer>
+  PR Academy © 2026<br>
+  Learn. Communicate. Influence.
+</footer>
+
+<script>
+function showLesson(type) {
+  const content = document.getElementById("lesson-content");
+  content.style.display = "block";
+  content.innerHTML = `
+    <h2>Lesson 1: Introduction to Public Relations</h2>
+    <p>Public Relations (PR) is the strategic communication process used to build and maintain mutually beneficial relationships between an organisation and its publics.</p>
+    <h3>Why is PR important?</h3>
+    <ul>
+      <li>Builds a positive reputation.</li>
+      <li>Creates understanding and trust.</li>
+      <li>Maintains relationships with the public.</li>
+      <li>Helps organisations communicate effectively.</li>
+    </ul>
+    <h3>Quick question</h3>
+    <p>What is one major purpose of Public Relations?</p>
+    <button onclick="alert('Correct! PR helps build and maintain relationships and trust.')">Building relationships and trust</button>
+    <p><button onclick="document.getElementById('lesson-content').style.display='none'">Close lesson</button></p>
+  `;
+  content.scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
