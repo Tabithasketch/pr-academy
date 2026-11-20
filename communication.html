@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#172554">
+<title>Communication Skills | PR Academy</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f7f2;
+  color: #172554;
+  line-height: 1.7;
+}
+header {
+  background: #172554;
+  color: white;
+  padding: 30px 22px 45px;
+  border-radius: 0 0 35px 35px;
+}
+header a {
+  color: #e5d18c;
+  text-decoration: none;
+}
+header h1 {
+  font-size: 32px;
+}
+.container {
+  padding: 25px 20px;
+}
+.card {
+  background: white;
+  padding: 24px;
+  margin-bottom: 22px;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+h2 {
+  color: #172554;
+}
+.lesson {
+  display: none;
+}
+button {
+  background: #172554;
+  color: white;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 16px;
+  margin: 6px 0;
+  cursor: pointer;
+}
+.answer {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+button:hover {
+  opacity: 0.85;
+}
+.result {
+  font-weight: bold;
+  margin-top: 15px;
+}
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="index.html">← Back to PR Academy</a>
+<p>PR ACADEMY • COURSE 02</p>
+<h1>Communication Skills 🎤</h1>
+<p>Learn to communicate clearly, confidently and professionally.</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>Welcome to Communication Skills!</h2>
+<p>This course will help you develop effective communication skills for your personal and professional life.</p>
+<p><b>Level:</b> Beginner</p>
+<p><b>Lessons:</b> 4 practical lessons</p>
+</div>
+
+<div class="card">
+<h2>Your Lessons 📚</h2>
+<button onclick="openLesson(1)">Lesson 1: Understanding Communication</button>
+<button onclick="openLesson(2)">Lesson 2: Verbal Communication</button>
+<button onclick="openLesson(3)">Lesson 3: Non-verbal Communication</button>
+<button onclick="openLesson(4)">Lesson 4: Active Listening</button>
+</div>
+
+<div class="card lesson" id="lesson1">
+<h2>Lesson 1: Understanding Communication</h2>
+<p>Communication is the process of sharing information, ideas, thoughts and feelings between people.</p>
+<h3>Elements of Communication</h3>
+<ul>
+<li><b>Sender:</b> The person who sends a message.</li>
+<li><b>Message:</b> The information being shared.</li>
+<li><b>Channel:</b> The medium used to communicate.</li>
+<li><b>Receiver:</b> The person who receives the message.</li>
+<li><b>Feedback:</b> The receiver's response.</li>
+</ul>
+<h3>Why Communication Matters in PR</h3>
+<p>Public Relations professionals use communication to build trust, maintain relationships and share information with their publics.</p>
+</div>
+
+<div class="card lesson" id="lesson2">
+<h2>Lesson 2: Verbal Communication</h2>
+<p>Verbal communication involves using spoken or written words to share information.</p>
+<h3>Examples</h3>
+<ul>
+<li>Speaking during a presentation.</li>
+<li>Participating in a radio programme.</li>
+<li>Writing a professional email.</li>
+<li>Speaking during a meeting.</li>
+</ul>
+<h3>How to Improve</h3>
+<ul>
+<li>Speak clearly.</li>
+<li>Use simple and appropriate words.</li>
+<li>Organise your thoughts before speaking.</li>
+<li>Practise speaking regularly.</li>
+</ul>
+</div>
+
+<div class="card lesson" id="lesson3">
+<h2>Lesson 3: Non-verbal Communication</h2>
+<p>Non-verbal communication involves sending messages without using spoken or written words.</p>
+<h3>Examples</h3>
+<ul>
+<li><b>Eye contact:</b> Looking at someone while communicating.</li>
+<li><b>Facial expressions:</b> Smiling, frowning or showing surprise.</li>
+<li><b>Gestures:</b> Using hand movements.</li>
+<li><b>Posture:</b> The way you sit or stand.</li>
+<li><b>Body language:</b> How your body communicates feelings and attitudes.</li>
+</ul>
+<h3>PR Application</h3>
+<p>A PR professional should maintain appropriate body language during interviews, meetings and presentations.</p>
+</div>
+
+<div class="card lesson" id="lesson4">
+<h2>Lesson 4: Active Listening</h2>
+<p>Active listening means paying full attention to a speaker, understanding their message and responding appropriately.</p>
+<h3>Good Listening Habits</h3>
+<ul>
+<li>Give the speaker your attention.</li>
+<li>Avoid interrupting.</li>
+<li>Ask relevant questions.</li>
+<li>Show interest through appropriate body language.</li>
+<li>Give thoughtful feedback.</li>
+</ul>
+<h3>Why It Matters in PR</h3>
+<p>Listening helps PR professionals understand public opinions, identify concerns and build stronger relationships.</p>
+</div>
+
+<div class="card">
+<h2>Quick Knowledge Check 📝</h2>
+<p id="question">1. What is communication?</p>
+
+<div id="answers">
+<button class="answer" onclick="checkAnswer(this,false)">Selling products only</button>
+<button class="answer" onclick="checkAnswer(this,true)">Sharing information, ideas and feelings</button>
+<button class="answer" onclick="checkAnswer(this,false)">Speaking without listening</button>
+</div>
+
+<p class="result" id="result"></p>
+<button onclick="nextQuestion()">Next Question →</button>
+</div>
+
+<div class="card">
+<h2>Practical Exercise 🎯</h2>
+<p>Imagine you are a PR officer addressing students about an upcoming school event.</p>
+<p>Write a short announcement that:</p>
+<ul>
+<li>Introduces the event.</li>
+<li>Explains why students should attend.</li>
+<li>Provides the necessary information.</li>
+<li>Encourages participation.</li>
+</ul>
+<p><b>Remember:</b> Good communication should be clear, accurate and appropriate for its audience.</p>
+</div>
+
+</div>
+
+<footer>
+<p>PR Academy 🎓</p>
+<p>Learn • Communicate • Influence</p>
+</footer>
+
+<script>
+function openLesson(number) {
+  document.querySelectorAll('.lesson').forEach(
+    lesson => lesson.style.display = 'none'
+  );
+  const selected = document.getElementById('lesson' + number);
+  selected.style.display = 'block';
+  selected.scrollIntoView({behavior:'smooth'});
+}
+
+const questions = [
+  {
+    q: "1. What is communication?",
+    a: ["Selling products only", "Sharing information, ideas and feelings", "Speaking without listening"],
+    correct: 1
+  },
+  {
+    q: "2. Which is an example of non-verbal communication?",
+    a: ["Writing an email", "Making a phone call", "Facial expressions"],
+    correct: 2
+  },
+  {
+    q: "3. What is active listening?",
+    a: ["Interrupting the speaker", "Paying attention and understanding", "Ignoring feedback"],
+    correct: 1
+  },
+  {
+    q: "4. What is feedback?",
+    a: ["The receiver's response", "The sender's clothes", "The communication room"],
+    correct: 0
+  }
+];
+
+let current = 0;
+let answered = false;
+
+function showQuestion() {
+  answered = false;
+  document.getElementById('question').textContent = questions[current].q;
+  document.getElementById('result').textContent = '';
+
+  const answers = document.getElementById('answers');
+  answers.innerHTML = '';
+
+  questions[current].a.forEach((answer, index) => {
+    const button = document.createElement('button');
+    button.className = 'answer';
+    button.textContent = answer;
+    button.onclick = () => checkAnswer(button, index === questions[current].correct);
+    answers.appendChild(button);
+  });
+}
+
+function checkAnswer(button, correct) {
+  if (answered) return;
+  answered = true;
+
+  const result = document.getElementById('result');
+
+  if (correct) {
+    result.textContent = 'Correct! Excellent work! 🎉';
+    result.style.color = 'green';
+  } else {
+    result.textContent = 'Not quite. Review the lesson and try again next time.';
+    result.style.color = 'red';
+  }
+}
+
+function nextQuestion() {
+  if (!answered) {
+    document.getElementById('result').textContent =
+      'Please answer the question first.';
+    return;
+  }
+
+  current++;
+
+  if (current >= questions.length) {
+    document.getElementById('question').textContent =
+      'Congratulations! You completed the quiz! 🎓';
+    document.getElementById('answers').innerHTML = '';
+    document.getElementById('result').textContent =
+      'You have completed all 4 questions. Well done!';
+    document.getElementById('result').style.color = 'green';
+    return;
+  }
+
+  showQuestion();
+}
+
+</script>
+
+</body>
+</html>
