@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#172554">
+<title>PR Fundamentals | PR Academy</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f7f2;
+  color: #172554;
+  line-height: 1.6;
+}
+header {
+  background: #172554;
+  color: white;
+  padding: 25px 20px;
+  border-radius: 0 0 25px 25px;
+}
+header small { color: #e5c878; }
+main { padding: 20px; }
+.card {
+  background: white;
+  padding: 18px;
+  margin: 15px 0;
+  border-radius: 15px;
+}
+button {
+  background: #172554;
+  color: white;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 9px;
+  margin: 5px 3px;
+  cursor: pointer;
+}
+.back {
+  color: #e5c878;
+  text-decoration: none;
+}
+.lesson {
+  display: none;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+.question {
+  background: #f1f3f8;
+  padding: 13px;
+  border-radius: 10px;
+  margin: 12px 0;
+}
+.result { font-weight: bold; }
+</style>
+</head>
+
+<body>
+
+<header>
+<a class="back" href="index.html">← Back to PR Academy</a>
+<p>PR ACADEMY • COURSE 01</p>
+<h1>PR Fundamentals 📚</h1>
+<p>Build a strong foundation in Public Relations.</p>
+</header>
+
+<main>
+
+<div class="card">
+<h2>Welcome to PR Fundamentals!</h2>
+<p>This course introduces you to Public Relations, its history, functions and professional responsibilities.</p>
+<p><strong>Level:</strong> Beginner</p>
+<p><strong>Lessons:</strong> 3 introductory lessons</p>
+</div>
+
+<h2>Your lessons</h2>
+
+<div class="card">
+<h3>01. Introduction to Public Relations</h3>
+<p>Understand what PR means and why it matters.</p>
+<button onclick="openLesson(1)">Start lesson</button>
+</div>
+
+<div class="card">
+<h3>02. History of Public Relations</h3>
+<p>Explore how Public Relations developed.</p>
+<button onclick="openLesson(2)">Start lesson</button>
+</div>
+
+<div class="card">
+<h3>03. Functions of Public Relations</h3>
+<p>Discover the responsibilities of PR practitioners.</p>
+<button onclick="openLesson(3)">Start lesson</button>
+</div>
+
+<section id="lesson1" class="lesson">
+<h2>Lesson 1: Introduction to Public Relations</h2>
+<p>Public Relations is a strategic communication process that builds and maintains mutually beneficial relationships between an organisation and its publics.</p>
+
+<h3>What is the purpose of PR?</h3>
+<ul>
+<li>Building trust and understanding.</li>
+<li>Maintaining a positive reputation.</li>
+<li>Communicating with different publics.</li>
+<li>Managing relationships between organisations and people.</li>
+</ul>
+
+<h3>Important PR terms</h3>
+<p><strong>Publics:</strong> Groups of people who have an interest in or are affected by an organisation.</p>
+<p><strong>Reputation:</strong> The way an organisation is perceived by others.</p>
+<p><strong>Communication:</strong> The exchange of information and ideas.</p>
+</section>
+
+<section id="lesson2" class="lesson">
+<h2>Lesson 2: History of Public Relations</h2>
+<p>Public Relations developed over time as individuals, organisations and governments recognised the importance of communicating with the public.</p>
+
+<h3>Important historical figures</h3>
+<p><strong>Ivy Lee:</strong> Known for promoting openness and accurate information in organisational communication.</p>
+<p><strong>Edward Bernays:</strong> A major figure in the development of modern Public Relations and the use of research and persuasion.</p>
+
+<h3>How PR has evolved</h3>
+<ul>
+<li>Early publicity and public information.</li>
+<li>Professional communication and media relations.</li>
+<li>Research-based strategic PR.</li>
+<li>Digital and social media communication.</li>
+</ul>
+</section>
+
+<section id="lesson3" class="lesson">
+<h2>Lesson 3: Functions of Public Relations</h2>
+<p>PR practitioners perform several important functions to help organisations build relationships with their publics.</p>
+
+<ul>
+<li><strong>Media relations:</strong> Maintaining relationships with journalists and media organisations.</li>
+<li><strong>Publicity:</strong> Generating attention and media coverage.</li>
+<li><strong>Crisis communication:</strong> Communicating during difficult situations.</li>
+<li><strong>Community relations:</strong> Building relationships with local communities.</li>
+<li><strong>Internal communication:</strong> Communicating with employees.</li>
+<li><strong>Research:</strong> Understanding public opinions and needs.</li>
+</ul>
+</section>
+
+<div class="card">
+<h2>Quick knowledge check 📝</h2>
+<p>What is the main purpose of Public Relations?</p>
+
+<div class="question">
+<button onclick="checkAnswer(this, false)">Selling products only</button>
+<button onclick="checkAnswer(this, true)">Building and maintaining relationships</button>
+<button onclick="checkAnswer(this, false)">Controlling every public opinion</button>
+</div>
+
+<p id="result" class="result"></p>
+</div>
+
+</main>
+
+<script>
+function openLesson(number) {
+  document.querySelectorAll('.lesson').forEach(
+    lesson => lesson.style.display = 'none'
+  );
+  const selected = document.getElementById('lesson' + number);
+  selected.style.display = 'block';
+  selected.scrollIntoView({behavior:'smooth'});
+}
+
+function checkAnswer(button, correct) {
+  const result = document.getElementById('result');
+  if (correct) {
+    result.textContent = 'Correct! Excellent work! 🎉';
+    result.style.color = 'green';
+  } else {
+    result.textContent = 'Not quite. Review Lesson 1 and try again.';
+    result.style.color = 'red';
+  }
+}
+</script>
+
+</body>
+</html>
